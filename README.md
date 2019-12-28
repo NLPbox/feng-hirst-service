@@ -1,0 +1,47 @@
+# feng-hirst-service
+
+[![Travis Build Status](https://travis-ci.org/NLPbox/feng-hirst-service.svg?branch=master)](https://travis-ci.org/NLPbox/feng-hirst-service)
+[![Docker Build Status](https://img.shields.io/docker/build/nlpbox/feng-hirst-service.svg)](https://hub.docker.com/r/nlpbox/feng-hirst-service)
+
+This docker container allows you to build, install and run the
+[Feng/Hirst discourse parser](http://www.cs.toronto.edu/~weifeng/software.html)
+(Feng and Hirst 2014) in a docker container with an added REST API.
+Instead of the original code, this service uses [my fork](https://github.com/arne-cl/feng-hirst-rst-parser) which applies
+some patches and is easier to dockerize.
+
+## build
+
+docker build -t feng-hirst-service .
+
+## run
+
+docker run -p 8000:8000 -ti feng-hirst-service
+
+## Usage Examples
+
+### CURL
+
+```
+$ cat input_short.txt
+Although they didn't like it, they accepted the offer.
+
+$ curl -X POST -F "input=@input_short.txt" http://localhost:8000/parse
+ParseTree('Contrast[S][N]', ["Although they did n't like it ,", 'they accepted the offer .'])
+```
+
+### Javascript
+
+This works in Chrome, but not in Firefox:
+
+```
+>>> var xhr = new XMLHttpRequest();
+
+>>> xhr.open("POST", "http://localhost:8000/parse")
+
+>>> var data = new FormData();
+>>> data.append('input', 'Altough they didn\'t like him, they accepted the offer.');
+
+>>> xhr.send(data);
+>>> console.log(xhr.response);
+ParseTree('Background[S][N]', ["Altough they did n't like him ,", 'they accepted the offer .'])
+```
