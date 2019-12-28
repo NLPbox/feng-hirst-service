@@ -6,8 +6,10 @@
 This docker container allows you to build, install and run the
 [Feng/Hirst discourse parser](http://www.cs.toronto.edu/~weifeng/software.html)
 (Feng and Hirst 2014) in a docker container with an added REST API.
-Instead of the original code, this service uses [my fork](https://github.com/arne-cl/feng-hirst-rst-parser) which applies
-some patches and is easier to dockerize.
+Instead of the original code, this service uses [my fork](https://github.com/arne-cl/feng-hirst-rst-parser)
+which applies some patches, is easier to dockerize and produces an output
+format that is easier to parse (e.g. by [discoursegraphs](https://github.com/arne-cl/discoursegraphs)
+or the [rst-converter-service](https://arne-cl@github.com/NLPbox/rst-converter-service).
 
 ## build
 
