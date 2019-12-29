@@ -1,7 +1,7 @@
 # feng-hirst-service
 
 [![Travis Build Status](https://travis-ci.org/NLPbox/feng-hirst-service.svg?branch=master)](https://travis-ci.org/NLPbox/feng-hirst-service)
-[![Docker Build Status](https://img.shields.io/docker/build/nlpbox/feng-hirst-service.svg)](https://hub.docker.com/r/nlpbox/feng-hirst-service)
+[![Docker Build Status](https://img.shields.io/docker/cloud/build/nlpbox/feng-hirst-service.svg)](https://hub.docker.com/r/nlpbox/feng-hirst-service)
 
 This docker container allows you to build, install and run the
 [Feng/Hirst discourse parser](http://www.cs.toronto.edu/~weifeng/software.html)
@@ -9,7 +9,7 @@ This docker container allows you to build, install and run the
 Instead of the original code, this service uses [my fork](https://github.com/arne-cl/feng-hirst-rst-parser)
 which applies some patches, is easier to dockerize and produces an output
 format that is easier to parse (e.g. by [discoursegraphs](https://github.com/arne-cl/discoursegraphs)
-or the [rst-converter-service](https://arne-cl@github.com/NLPbox/rst-converter-service).
+or the [rst-converter-service](https://arne-cl@github.com/NLPbox/rst-converter-service)).
 
 ## build
 
