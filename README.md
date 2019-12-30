@@ -47,3 +47,18 @@ This works in Chrome, but not in Firefox:
 >>> console.log(xhr.response);
 ParseTree('Background[S][N]', ["Altough they did n't like him ,", 'they accepted the offer .'])
 ```
+
+
+## Citation
+
+If you use the Feng/Hirst RST parser in your academic work, please cite the following paper:
+
+Vanessa Wei Feng and Graeme Hirst, 2014.  
+[A Linear-Time Bottom-Up Discourse Parser with Constraints and Post-Editing.](http://aclweb.org/anthology/P14-1048)  
+In _Proceedings of the 52th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies (ACL-2014)_, Baltimore, USA. 
+
+For more technical details, see:
+
+Vanessa Wei Feng and Graeme Hirst, 2014.  
+[Two-pass Discourse Segmentation with Pairing and Global Features.](http://arxiv.org/abs/1407.8215)  
+arXiv:1407.8215v1.
